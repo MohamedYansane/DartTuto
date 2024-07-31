@@ -14,9 +14,18 @@ void main(){
   print(lastName);
   //as what we did with name we can't do it with age or lasName
   //because we have destructured
+
+  //printing stuff element remarque maintenant il ne me retourne plus $1 or $2
+  //etc
+   final stuff = printStuff();
+   print(stuff.name);
 }
 
 //it called a record;
 (int, String) printRecord(){
   return (23, 'Yansane Mohamed');
+}
+// si je veux utiliser le required ici avec les tuples e optional
+({int age , String name, String? lastName}) printStuff(){
+  return (age: 12, name: "Kamal", lastName: null);
 }
