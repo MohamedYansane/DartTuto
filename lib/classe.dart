@@ -11,6 +11,16 @@ void main (){
   //changer le shape
   //NB: quand je fais le print avec cookie j'obtiendrai toujours Circle
   print(preparer.shape);
+
+  //Important
+
+  print(Cookie().shape); // it gonna return circle
+  Cookie().shape = 'Rectangle';
+  print(Cookie().shape); // we still gonna get circle
+  //because we r not using an instance of a cookie class so that we can modify
+  // like what we did with preparer or cookie
+
+  //
 }
 
 class Cookie {
