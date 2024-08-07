@@ -8,6 +8,16 @@ void main(){
   //cookie.size = 1.0; we can change it now cause it final
   print(cookie.shape);
   print(cookie._height);
+
+  // getters setters
+  print(cookie._height);
+  //cookie.setHeight(17); itt will throws us error
+  // for our setters cause it's a syntax for a method
+
+  //right syntax for setters
+  cookie.setHeight = 17;
+  print(cookie._height);
+
 }
 
 class Cookie{
@@ -32,7 +42,9 @@ class Cookie{
    int get width => _width;
 
   //Setters
-
+  set setHeight(int h){
+    _height = h;
+  }
 
   //static function
 
