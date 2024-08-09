@@ -1,12 +1,12 @@
 void main(){
-  // most of the time is a represent a symbol of inheritance
+  //TODO:  most of the time is a represent a symbol of inheritance
   //like car is a vehicle or truck or bike
 
   Car car = Car();
   car.accelerate();
   print(car.speed);
 
-  // use of as
+  //TODO:  use of as
   // our vehile is type of Vehicle
   Vehicle vehicle = Car();
   // there is speed inside vehicle but we wanna access nb of wheels how can we do that
@@ -24,7 +24,7 @@ void main(){
 }
 
 
-// a class can't extend 2 class at the same time like and truck can't extends
+//TODO:  a class can't extend 2 class at the same time like and truck can't extends
 //another class
 
 // we think of inheritance like family tree
@@ -46,7 +46,7 @@ class SomeClass{
 
 class Vehicle extends SomeClass{
   //int speed = 10;
-  // use of override we already have accelerate in the parent class so the child must have
+  //TODO:  use of override we already have accelerate in the parent class so the child must have
   // override
   @override
   int accelerate(){
