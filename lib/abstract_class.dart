@@ -1,5 +1,5 @@
 void main(){
-  //TODO: Abstract class can't be instancied like Vehicle vehicle = Vehicle();
+  //TODO: Abstract class can't be instanced like Vehicle vehicle = Vehicle();
   Vehicle vehicle = Car();
   vehicle.accelerate();
 
@@ -9,7 +9,7 @@ void main(){
 //TODO: normal class are implicit an abstract class but abstract
 // TODO can't be constructed we can't use construct
 abstract class Vehicle{
- //TODO: in abstract class we can create a function without using {} like we see
+  //TODO: in abstract class we can create a function without using {} like we see
   //TODO in the previous class concept
   int nbWheels = 10;
   void accelerate();
