@@ -9,7 +9,7 @@ void main(){
 class Constants{
   // with static the constructor is not called at all
   //but when we print greeting above we get the hello world
-  //cause we have instancied the constant above   final constants = Constants();
+  //cause we have instanced the constant above   final constants = Constants();
   //when we remove it it no longer work
   Constants(){
     print("Hello world");
