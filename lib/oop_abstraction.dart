@@ -4,6 +4,9 @@ void main(){
   //TODO: 1- Abstraction: on ne peut instancier an abstract class
   //TODO: it allows us or it a process to hide an internal details and expose
   // TODO only the essential details
+
+  //TODO: L'abstraction en informatique est une méthode où le processus
+  // TODO de programmation est caché, en se concentrant uniquement sur le résultat.
   //eg: we can't write Animal animal = Animal() but we can do as below
 
   Animal animal = Cat();
