@@ -1,9 +1,13 @@
 void main(){
+
   //TODO: List is an order collection of object
+
   //List list = List(); it won't work cause it's an abstract class as we see
   List list = [10, 11, 14, 'hEllo']; // this is list of dynamic
   List<int> marks = [10, 11, 14];
+
   //TODO Object we can only pass a non nullable value different of dynamic
+
   List<Object> obj = [10, 11, 14, 'hEllo', false];
   final studentMohamed = Student('Mohamed');
   List<Student> students = [Student('Yansane'), studentMohamed];
@@ -12,7 +16,9 @@ void main(){
 
   final studentName = students[0];
   print(studentName.name);
+
   //TODO List of students using dynamic value
+
   List dynamicStudent = [Student('Yansane'), Student('Mohamed'), 'Mark'];
   //we can check if our dynamic student is Student type
   if(dynamicStudent[2] is Student){
@@ -23,16 +29,21 @@ void main(){
   }
   //we can use runtype also if dynamicStudent[0].runtype == Student
   //TODO 1- add new student
+
   students.add(Student('Baba'));
   students.insert(1, Student("Pema"));
   print('Adding a student');
   print(students);
+
   //TODO 2- Update student
+
   print('Updating a student');
   students[0] = Student('Medo');
   print(students[0].name);
   print(students);
+
   //TODO 2- Remove student
+
   print('Removing a student');
   students.remove(Student("Mohamed")); // it's not removing cause it's creating another
   //instance of Mohamed so the first instance is what we created at insert they r differents
@@ -42,6 +53,7 @@ void main(){
   print(students);
 
   //TODO use of filter
+
   List<Etudiant>etudiants = [Etudiant('Yansane', 18), Etudiant('Mohamed', 19),
     Etudiant('Medo', 15), Etudiant('Baba', 10),Etudiant('Alpha', 08)];
   List<Etudiant> noteabove10 = [];
@@ -54,17 +66,33 @@ void main(){
   print(noteabove10);
 
  //TODO Second method by using where either .where((value){}) or .where((value)=>)
+
   final filteredStudent = etudiants.where((etudiant)=> etudiant.marks > 10);//it will return an iterable
   //we have to convert our iterable to a list we can use toList by here let just print
   //print(filteredStudent);// when we hove we see Iterable
   print(filteredStudent.toList());
 
+  //TODO filtered with one line by reassigning it
+
+  etudiants = etudiants.where((etudiant) => etudiant.marks > 10).toList();
+  print("Filtered etudiants by using oneline");
+  print(etudiants);
+
+  //TODO using reverse
+  //print(etudiants.reversed); it will return an iterable so let return a list
+  print(etudiants.reversed.toList());
+
+  //TODO using addAll but notice an iterable can be a list but a list can't be an iterable
+
+  etudiants.addAll([Etudiant('Oumar', 12),Etudiant('Binta', 13)]);
 
   //TODO List <datatype> var_name = [data_elt] eg with marks
 
+  //TODO we have many list methods you can check them
+
   final student = Student('Yansane'); // as we see here Student<String> student
   // when we hover student
-  student.printName('Mohamed Yansane');
+  //student.printName('Mohamed Yansane');
 
 }
 
