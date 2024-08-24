@@ -1,9 +1,16 @@
 void main(){
   //SETS
 
+  final yansStudent = Etudiant('Yansane', 20);
+  Set<Etudiant>etudiants = {Etudiant('Mohamed', 19),
+    Etudiant('Medo', 15), Etudiant('Baba', 10),Etudiant('Alpha', 08), yansStudent,
+    yansStudent, yansStudent};
 
-  List<Etudiant>etudiants = [Etudiant('Yansane', 18), Etudiant('Mohamed', 19),
-    Etudiant('Medo', 15), Etudiant('Baba', 10),Etudiant('Alpha', 08)];
+  print(etudiants);
+
+  List<int> marks = [10, 11, 14, 14,11];
+  //TODO Convert a list to Set we use toSet
+  print(marks.toSet());
 
 }
 
