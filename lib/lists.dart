@@ -4,7 +4,9 @@ void main(){
 
   //List list = List(); it won't work cause it's an abstract class as we see
   List list = [10, 11, 14, 'hEllo']; // this is list of dynamic
-  List<int> marks = [10, 11, 14];
+  List<int> marks = [10, 11, 14, 14,11];
+  //TODO Convert a list to Set we use toSet
+  print(marks.toSet());
 
   //TODO Object we can only pass a non nullable value different of dynamic
 
