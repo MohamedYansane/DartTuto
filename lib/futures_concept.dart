@@ -32,23 +32,26 @@ void main() async{
 
   //TODO using http  more detail about this go to https://pub.dev/packages/http/example
   //TODO In A URL: we have authority, port, path, constraint
-  //todo in our case our authorithy is jsonplaceholder.typicode.com and we don't care about path here
+  //todo in our case our authority is jsonplaceholder.typicode.com and we don't care about path here
   //todo /users it means users represent out path here
   var url = Uri.https('jsonplaceholder.typicode.com','users');
-  var response = await http.get(url);
-  if(response.statusCode == 200){
-    print(response.body);
-    //todo print the name we convert it first
-    print(jsonDecode(response.body)[0]['name']);
+  try{
+    var response = await http.get(url);
+    if(response.statusCode == 200){
+      print(response.body);
+      //todo print the name we convert it first
+      print(jsonDecode(response.body)[0]['name']);
 
-
-  }
-  else{
-    print('Response failed with status: ${response.statusCode}');
+    }
+    else{
+      print('Response failed with status: ${response.statusCode}');
+    }
+  }catch(e){
+    print('Some unexpected error occurred');
   }
 }
 
-//todo we didn't add async infront of the fn by using future we don't need it
+//todo we didn't add async in front of the fn by using future we don't need it
 Future<String> fnResult(){
   return Future((){
     return 'Hey!!!!';
